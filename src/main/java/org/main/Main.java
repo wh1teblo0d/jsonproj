@@ -48,15 +48,24 @@ public class Main {
                 }
                 case 2 -> {
                     people = readDataFromFile(filePath);
-                    for ()
+                    for (int i = 0; i < people.size(); i++){
+                        people.get(i).print();
+                    }
 
 
                 }
                 case 3 -> {
+                    people = readDataFromFile(filePath);
+                    for (int i = 0; i < people.size(); i++){
+                      System.out.println( people.get(i).getAge());
 
+                    }
                 }
                 case 4 -> {
-
+                    people = readDataFromFile(filePath);
+                    for (int i = 0; i < people.size(); i++) {
+                        System.out.println(people.get(i).getName());
+                    }
                 }
                 case 5 -> {
 
