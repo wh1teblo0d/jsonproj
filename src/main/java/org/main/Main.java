@@ -68,6 +68,42 @@ public class Main {
                     }
                 }
                 case 5 -> {
+                    people = readDataFromFile(filePath);
+                    for (int i = 0; i < people.size(); i++) {
+                      System.out.println("number = " + i);
+                        people.get(i).print();
+                    }
+                    Scanner choiceNum = new Scanner(System.in);
+                    int choosik = 0;
+                    System.out.println("choice user");
+                    choosik = choiceNum.nextInt();
+                    people.get(choosik).print();
+
+                    int changeData = 0;
+
+                    System.out.println("1 - change name\n2 - change age");
+                    if (changeData == 1){
+                        Scanner askData = new Scanner(System.in);
+                        String newNamek;
+
+                        System.out.println("enter new name");
+                      newNamek = askData.next();
+
+                        people.get(choosik).setName(newNamek);
+                        addDataToFile(filePath,people);
+                    }
+                    if (changeData == 2){
+                        Scanner askData = new Scanner(System.in);
+                        int agik;
+
+                        System.out.println("enter new age");
+                        agik = askData.nextInt();
+
+                        people.get(choosik).setAge(agik);
+                        addDataToFile(filePath, people);
+
+
+                    }
 
                 }
             }
